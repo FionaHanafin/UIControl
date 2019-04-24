@@ -7,4 +7,7 @@
     <string name="hint">Enter some text!</string>
     <string name="enter">Enter</string>
     <string name="exit">exit</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="hi">hi</string>
 </resources>

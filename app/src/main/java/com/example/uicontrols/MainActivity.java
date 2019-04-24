@@ -61,71 +61,155 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+//
+//        bold.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                //if both are checked
+//                if (italics.isChecked() && buttonView.isChecked()) {
+//                    if (font2.isChecked()) {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD_ITALIC);
+//                    } else {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD_ITALIC);
+//                    }
+//                    //if bold are checked but not italics
+//                } else if (buttonView.isChecked()) {
+//                    if (font2.isChecked()) {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD);
+//                    } else {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD);
+//                    }
+//                    //if bold is unchecked
+//                } else if (!buttonView.isChecked()) {
+//                    if (font2.isChecked()) {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.NORMAL);
+//                    }else if(bold.isChecked()){
+//                            t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD);
+//                    } else {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.NORMAL);
+//                    }
+//                  }
+//                }
+//
+//        });
+
+//        italics.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//
+//                //if both are checked
+//                if (bold.isChecked() && buttonView.isChecked()) {
+//                    if (font2.isChecked()) {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD_ITALIC);
+//                    } else {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD_ITALIC);
+//                    }
+//                    //if bold are checked but not italics
+//                } else if (buttonView.isChecked()) {
+//                    if (font2.isChecked()) {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.ITALIC);
+//                    } else {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.ITALIC);
+//                    }
+//                    //if bold is unchecked
+//                } else if (!buttonView.isChecked()) {
+//                    if (font2.isChecked() && bold.isChecked()) {
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD);
+//                    } else if(bold.isChecked()){
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD);
+//                    }else{
+//                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.NORMAL
+//                        );
+//                    }
+//                }
+//            }
+//
+//
+//        });
+//
+        italics.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(bold.isChecked() && italics.isChecked()){
+                    if (font1.isChecked()){
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD_ITALIC);
+                    }else{
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD_ITALIC);
+                    }
+                }else if(bold.isChecked() && !italics.isChecked()){
+                    if (font1.isChecked()){
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD);
+                    }else{
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD);
+                    }
+                }else if(!bold.isChecked() && italics.isChecked()){
+                    if (font1.isChecked()){
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.ITALIC);
+                    }else{
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.ITALIC);
+                    }
+                }else if(!bold.isChecked()&& !italics.isChecked()){
+                    if (font1.isChecked()){
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.NORMAL);
+                    }else{
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.NORMAL);
+                    }
+                }
+            }
+        });
 
         bold.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                //if both are checked
-                if (italics.isChecked() && buttonView.isChecked()) {
-                    if (font2.isChecked()) {
-                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD_ITALIC);
-                    } else {
+                if(bold.isChecked() && italics.isChecked()){
+                    if (font1.isChecked()){
                         t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD_ITALIC);
+                    }else{
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD_ITALIC);
                     }
-                    //if bold are checked but not italics
-                } else if (buttonView.isChecked()) {
-                    if (font2.isChecked()) {
-                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD);
-                    } else {
+                }else if(!bold.isChecked() && italics.isChecked()){
+                    if (font1.isChecked()){
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.ITALIC);
+                    }else{
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.ITALIC);
+                    }
+                }else if(bold.isChecked() && !italics.isChecked()){
+                    if (font1.isChecked()){
                         t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD);
+                    }else{
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD);
                     }
-                    //if bold is unchecked
-                } else if (!buttonView.isChecked()) {
-                    if (font2.isChecked()) {
-                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.NORMAL);
-                    } else {
+                }else if(!bold.isChecked()&& !italics.isChecked()){
+                    if (font1.isChecked()){
                         t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.NORMAL);
+                    }else{
+                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.NORMAL);
                     }
                 }
             }
         });
 
-        italics.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        b.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                //if both are checked
-                if (bold.isChecked() && buttonView.isChecked()) {
-                    if (font2.isChecked()) {
-                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.BOLD_ITALIC);
-                    } else {
-                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.BOLD_ITALIC);
-                    }
-                    //if bold are checked but not italics
-                } else if (buttonView.isChecked()) {
-                    if (font2.isChecked()) {
-                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.ITALIC);
-                    } else {
-                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.ITALIC);
-                    }
-                    //if bold is unchecked
-                } else if (!buttonView.isChecked()) {
-                    if (font2.isChecked()) {
-                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.charlotte), Typeface.NORMAL);
-                    } else {
-                        t.setTypeface(ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul), Typeface.NORMAL);
-                    }
-                }
-            }
-
-
-        });
-        b.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                boolean checked = ((ToggleButton)v).isChecked();
-                if(checked){
+                if(b.isChecked()) {
+                    Log.d("************", String.valueOf(b.isChecked()));
                     e.addTextChangedListener(new TextWatcher() {
                         @Override
                         public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -134,9 +218,14 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void afterTextChanged(Editable s) {
-                            t.setText(s);
+                            if(b.isChecked()) {
+                                t.setText(s);
+                            }
                         }
                     });
+
+                }else {
+                    Log.d("************", String.valueOf(b.isChecked()));
                 }
             }
         });
@@ -147,17 +236,22 @@ public class MainActivity extends AppCompatActivity {
             case  R.id.r1:
                 if (checked)
                     typeface = ResourcesCompat.getFont(MainActivity.this, R.font.precious_soul);
-                t.setTypeface(typeface);
+                    t.setTypeface(typeface);
+                    bold.setChecked(false);
+                    italics.setChecked(false);
                 break;
             case  R.id.r2:
                 if (checked)
                     typeface = ResourcesCompat.getFont(MainActivity.this, R.font.charlotte);
-                t.setTypeface(typeface);
+                    t.setTypeface(typeface);
+                    bold.setChecked(false);
+                    italics.setChecked(false);
                 break;
         }
     }
     public void exitApp(View v){
         finish();
+
         System.exit(0);
     }
 
